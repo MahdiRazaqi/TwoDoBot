@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	token    = "1077242683:AAFz-mPVyltWVBXYKr7TxH4PAz7b85fO56w"
+	token    = "912993317:AAEzu7ltDfNPKdAa10cqwvgfoIA8r9woTtE"
 	endpoint = "https://api.telegram.org/bot" + token + "/"
 )
 

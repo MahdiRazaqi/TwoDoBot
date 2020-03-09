@@ -7,9 +7,10 @@ const (
 func controller(m Message) {
 	switch m.Text {
 	case "/start":
-		SendMessage(m.From.ID, start)
-	case "/insertTask":
-		SendMessage(m.From.ID, start)
+		sendMessage(m.From.ID, start)
+	case "/insert":
+		sendMessage(m.From.ID, "Send description task")
+	case "/delete":
+		sendMessage(m.From.ID, start)
 	}
-
 }
