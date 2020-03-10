@@ -1,5 +1,5 @@
 # TwoDoBot
-A Telegram bot for task management
+A Telegram bot for To-do list.
 
 ## Dependencies
 Create a config.json file on the root folder.
