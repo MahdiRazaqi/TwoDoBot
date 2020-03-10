@@ -9,13 +9,12 @@ import (
 	"time"
 )
 
-const (
-	token    = "912993317:AAEzu7ltDfNPKdAa10cqwvgfoIA8r9woTtE"
-	endpoint = "https://api.telegram.org/bot" + token + "/"
-)
+var endpoint string
 
 // Start bot server
 func Start() {
+	config()
+
 	var offset int
 	for range time.Tick(1000 * time.Millisecond) {
 		resp := getUpdates(Params{
@@ -27,6 +26,20 @@ func Start() {
 			controller(m.Message)
 		}
 	}
+}
+
+func config() {
+	config, err := ioutil.ReadFile("config.json")
+	if err != nil {
+		panic(err)
+	}
+
+	data := map[string]string{}
+	if err := json.Unmarshal(config, &data); err != nil {
+		panic(err)
+	}
+
+	endpoint = data["endpoint"]
 }
 
 func request(query string, method string, params Params) TelegramResponse {

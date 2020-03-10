@@ -1,7 +1,6 @@
 package jsondb
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -69,6 +68,5 @@ func SelectTask(user User, list string) []Task {
 		cardList = &data.Done
 	}
 
-	fmt.Println(cardList)
 	return *cardList
 }

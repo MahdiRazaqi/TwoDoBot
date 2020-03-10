@@ -52,7 +52,7 @@ type Message struct {
 	Video                 Video                `json:"video"`
 	Voice                 Voice                `json:"voice"`
 	VideoNote             VideoNote            `json:"video_note"`
-	caption               string               `json:"caption"`
+	Caption               string               `json:"caption"`
 	Contact               Contact              `json:"contact"`
 	Location              Location             `json:"location"`
 	Venue                 Venue                `json:"venue"`
